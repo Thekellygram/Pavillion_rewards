@@ -1,0 +1,749 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #F5F5F5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+/* mobile header navigation */
+.mobile-header {
+    position: fixed;
+    width: 100%;
+    display: none;
+    background: #F5F5F5;
+    z-index: 9;
+}
+
+.mobile-header .header{
+    margin-top: 40px;
+    padding: 0 23px;
+    padding-bottom: 10px;
+}
+
+.mobile-header .hamburger,
+.mobile-header .search,
+.mobile-header .notification,
+.mobile-header .profile-pic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mobile-header .search,
+.mobile-header .notification,
+.mobile-header .profile-pic {
+    align-items: center;
+}
+
+.mobile-header .search svg,
+.mobile-header .notification svg,
+.mobile-header .profile-pic svg{
+    cursor: pointer;
+}
+
+.mobile-header .hamburger {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.mobile-header .search {
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+
+.mobile-header .notification {
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+
+.mobile-header .profile-pic {
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+
+.mobile-header .profile-pic img {
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 2px;
+    border: 2px solid #FCBA2D;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+/* side-bar navigation */
+.aside {
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 256px;
+    height: 100%;
+    z-index: 10;
+}
+
+.aside .logo {
+    margin-top: 20px;
+    margin-left: 39px;
+}
+
+.aside .title {
+    font-size: 14px;
+    margin-top: 25px;
+    margin-left: 38px;
+    color: #0B677E;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.aside .general .active {
+    color: #2BA7E2;
+}
+
+.aside .subtitle {
+    font-size: 14px;
+    color: #C4C4C4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    margin-left: 42.75px;
+    cursor: pointer;
+}
+
+.aside .spacer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside .log-out {
+    color: #C4C4C4;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 27px;
+    font-size: 14px;
+    margin-left: 36.25px;
+    cursor: pointer;
+}
+
+/* main-page */
+.main-page {
+    position: absolute;
+    top: 0;
+    margin-left: 256px;
+    width: 1100px;
+}
+
+.main-page .welcome {
+    margin-top: 20px;
+    display: flex;
+    height: 60px;
+}
+
+.main-page .welcome .welcome-text,
+.main-page .welcome .search input,
+.main-page .welcome .notification,
+.main-page .welcome .profile-pic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-page .welcome .welcome-text {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.main-page .welcome .welcome-text .text {
+    color: #0B677E;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-page .welcome .welcome-text .sub-text {
+    color: #919499;
+    font-size: 14px;
+}
+
+.main-page .welcome .search {
+    flex: 0 0 17%;
+    max-width: 17%;
+}
+
+.main-page .welcome .search input {
+    background: #FFFFFF;
+    color: #919499;
+    font-size: 14px;
+    border: 0;
+    position: relative;
+    top: 12px;
+    border-radius: 10px;
+    width: 115px;
+    height: 15px;
+    padding: 9px 0 10px 42px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-page .welcome .notification {
+    flex: 0 0 5%;
+    max-width: 5%;
+}
+
+.main-page .welcome .notification svg {
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.main-page .welcome .profile-pic {
+    flex: 0 0 3%;
+    max-width: 3%;
+}
+
+.main-page .welcome .profile-pic img {
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 2px;
+    border: 2px solid #FCBA2D;
+    cursor: pointer;
+}
+
+/* transaction and card details */
+.transaction-details {
+    margin-top: 20px;
+}
+
+.transaction-details .transactions {
+    height: 276px;
+}
+
+.transaction-details .transactions .mastercard-template {
+    flex: 0 0 43%;
+    max-width: 43%;
+}
+
+.transaction-details .transactions .mastercard-template .card-cover {
+    height: 236px;
+    width: 409.82794189453125px;
+    left: 291px;
+    top: 146px;
+    border-radius: 25.3763427734375px;
+    background: linear-gradient(0deg, #0B677E, #0B677E);
+}
+
+.transaction-details .transactions .mastercard-template .card-cover .shading {
+    z-index: 1;
+    height: 236px;
+    width: 409.82794189453125px;
+    left: 291px;
+    top: 146px;
+    border-radius: 25.3763427734375px;
+    background: linear-gradient(251.92deg, rgba(34, 129, 227, 0.3) 19.75%, rgba(255, 255, 255, 0) 85.2%);
+}
+
+.transaction-details .transactions .mastercard-template .details {
+    z-index: 3;
+    position: relative;
+    color: #FFFFFF;
+    top: -210px;
+    left: 22.84px;
+    width: 355.84px;
+}
+
+.transaction-details .transactions .mastercard-template .details .mastercard {
+    margin-bottom: 55px;
+}
+
+
+.transaction-details .transactions .mastercard-template .details .mastercard-logo {
+    float: right;
+    text-align: right;
+    width: 100px;
+} 
+
+.transaction-details .transactions .mastercard-template .details .mastercard-logo .text {
+    font-size: 10.15px;
+}
+
+.transaction-details .transactions .mastercard-template .details .name {
+    font-size: 22.84px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.transaction-details .transactions .mastercard-template .details .card-number {
+    font-size: 17.76px;
+    margin-bottom: 10px;
+}
+
+.transaction-details .transactions .mastercard-template .details .expiry-date {
+    font-size: 12.69px;
+}
+
+.transaction-details .transactions .balance {
+    flex: 0 0 17.75%;
+    max-width: 17.75%;
+}
+
+.transaction-details .transactions .balance .card-cover {
+    height: 231.01979536237243px;
+    width: 148.5px;
+    left: 735.5px;
+    top: 149px;
+    border-radius: 19.080320358276367px;
+    background: #FCBA2D;
+}
+
+.transaction-details .transactions .balance .card-cover .bal {
+    position: relative;
+    color: #FFFFFF;
+    left: 20.84px;
+    top: 20.15px;
+    display: flex;
+    align-items: center;
+}
+
+.transaction-details .transactions .balance .card-cover .bal .text {
+    padding-right: 40px; 
+    font-size: 14px;   
+}
+
+.transaction-details .transactions .balance .card-cover .amount {
+    position: relative;
+    color: #FFFFFF;
+    left: 20.84px;
+    top: 135px;
+}
+
+.transaction-details .transactions .balance .card-cover .amount .number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.transaction-details .transactions .balance .card-cover .amount .unit {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -5px;
+}
+
+
+.transaction-details .transactions .balance .card-cover .circle {
+    position: relative;
+    color: #FFFFFF;
+    left: 105px;
+    top: 107.5px;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover {
+    height: 116.00993583835998px;
+    width: 403.4558410644531px;
+    border-radius: 9.405562400817871px;
+    background: #FFFFFF;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .earnings,
+.transaction-details .transactions .earnings-spendings .card-cover .spendings {
+    flex: 0 0 47.5%;
+    max-width: 47.5%;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .spacer {
+    flex: 0 0 5%;
+    max-width: 5%;
+    display: flex;
+    align-items: right;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .spacer svg {
+    padding-left: 17.33px;
+    padding-top: 19.5px;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .title {
+    padding-top: 35.85px;
+    padding-left: 17.33px;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .title .text {
+    color: #304858;
+    font-weight: 700;
+    font-size: 18.81px;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .title .sub-text {
+    color: #B4BAC1;
+    font-size: 10.97px;
+    font-weight: 700;
+}
+
+.transaction-details .transactions .earnings-spendings .card-cover .earnings svg,
+    .transaction-details .transactions .earnings-spendings .card-cover .spendings svg {
+    position: relative;
+    top: -40px;
+    left: 95px;
+}
+
+/* latest transactions and monthly points */
+.accounting .acc .latest-transactions {
+    flex: 0 0 60.75%;
+    max-width: 60.75%;
+}
+
+.accounting .acc .monthly-points {
+    flex: 0 0 39.25%;
+    max-width: 39.25%;
+}
+
+.accounting .acc .latest-transactions .card-cover {
+    width: 588px;
+    height: fit-content;
+    left: 292px;
+    top: 416px;
+    border-radius: 15px;
+    background: #FFFFFF;
+}
+
+.accounting .acc .latest-transactions .title {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 24px;
+    padding-bottom: 30px;
+}
+
+.accounting .acc .latest-transactions .title .name {
+    flex: 0 0 80%;
+    max-width: 80%;
+    font-size: 15.01px;
+    font-weight: 400;
+    color: #304858;
+}
+
+.accounting .acc .latest-transactions .title .search {
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    align-content: center;
+}
+
+.accounting .acc .latest-transactions .title .search svg:last-child {
+    padding-left: 29.91px;
+}
+
+.accounting .acc .latest-transactions .activity {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.accounting .acc .latest-transactions .activity .pic {
+    flex: 0 0 10%;
+    max-width: 10%;
+    margin-bottom: 15px;
+}
+
+.accounting .acc .latest-transactions .activity .activity-details {
+    flex: 0 0 72%;
+    max-width: 72%;
+    font-size: 13.01px;
+    color: #C4C4C4;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.accounting .acc .latest-transactions .activity .points {
+    flex: 0 0 18%;
+    max-width: 18%;
+    display: flex;
+    justify-content: right;
+    font-size: 14.01px;
+    color: #304858;
+}
+
+.accounting .acc .latest-transactions .activity .points .red {
+    color: #994943;
+}
+
+.accounting .acc .latest-transactions .activity .text {
+    font-size: 14.01px;
+    color: #304858;
+    font-weight: 700;
+}
+
+.accounting .acc .monthly-points .card-cover {
+    width: 100%;
+    border-radius: 9.405562400817871px;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.accounting .acc .monthly-points .title {
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    margin-top: -120px;
+}
+
+.accounting .acc .monthly-points .title .name {
+    color: #304858;
+    font-size: 15.01px;
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+.accounting .acc .monthly-points .title .filter {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.accounting .acc .monthly-points .title .filter select {
+    border: 0;
+    background: #FFFFFF;
+    color: #C4C4C4;
+    float: right;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.accounting .acc .monthly-points .activity {
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 35px;
+    color: #9E9E9E;
+    font-size: 14.3px;
+}
+
+.accounting .acc .monthly-points .activity .s-n,
+.accounting .acc .monthly-points .activity .year {
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.accounting .acc .monthly-points .activity .earn,
+.accounting .acc .monthly-points .activity .spend,
+.accounting .acc .monthly-points .activity .points-earned,
+.accounting .acc .monthly-points .activity .points-spent {
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.accounting .acc .monthly-points .activity .s-n {
+    height: 51px;
+}
+
+.accounting .acc .monthly-points .activity .year {
+    height: 50px;
+}
+
+.accounting .acc .monthly-points .activity .blue {
+    background: #2BA7E2;
+    color: #FFFFFF;
+}
+
+.accounting .acc .monthly-points .activity .light-blue {
+    background: #EDF5FE;
+}
+
+@media screen and (max-width: 720px) {
+    .mute {
+        display: none;
+    }
+
+    .mobile-show,
+    .hide {
+        display: initial;
+    }
+
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .aside {
+        left: -256px;
+    }
+
+    .main-page {
+        position: absolute;
+        top: 70px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .main-page .welcome {
+        margin-top: 27px;
+        padding-left: 9px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .main-page .welcome .search,
+    .main-page .welcome .notification,
+    .main-page .welcome .profile-pic {
+        display: none;
+    }
+    
+    .main-page .welcome .welcome-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .main-page .welcome .welcome-text .text {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    .main-page .welcome .welcome-text .sub-text {
+        font-size: 18.7px;
+        font-weight: 300;
+    }
+
+    .transaction-details .transactions {
+        height: fit-content;
+    }
+    
+    .transaction-details .transactions .mastercard-template {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 280px;
+    }
+    
+    .transaction-details .transactions .mastercard-template .card-cover {
+        width: 100%;
+    }
+    
+    .transaction-details .transactions .mastercard-template .card-cover .shading {
+        width: 100%;
+    }
+    
+    .transaction-details .transactions .mastercard-template .details {
+        width: 85%;
+    }
+    
+    .transaction-details .transactions .mastercard-template .details .name {
+        font-size: 17.44px;
+        font-weight: 600;
+    }
+    
+    .transaction-details .transactions .mastercard-template .details .card-number {
+        font-size: 13.57px;
+        font-weight: 400;
+    }
+    
+    .transaction-details .transactions .mastercard-template .details .expiry-date {
+        font-size: 9.69px;
+        font-weight: 400;
+    }
+    
+    .transaction-details .transactions .balance {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .transaction-details .transactions .balance .card-cover {
+        height: 235px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .transaction-details .transactions .balance .card-cover .bal {
+        width: 85%;
+        left: 30px;
+        top: 30px;
+    }
+    
+    .transaction-details .transactions .balance .card-cover .bal .text {
+        width: 75%;
+        font-size: 16px;   
+        font-weight: 400;
+    }
+
+    .transaction-details .transactions .balance .card-cover .amount {
+        left: 30px;
+        top: 105px;
+    }
+    
+    .transaction-details .transactions .balance .card-cover .amount .number {
+        font-size: 45px;
+        font-weight: 700;
+    }
+    
+    .transaction-details .transactions .balance .card-cover .amount .unit {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .transaction-details .transactions .balance .card-cover .mobile-circle {
+        position: relative;
+        color: #FFFFFF;
+        left: 67%;
+        top: 8%;
+    }
+
+    .transaction-details .transactions .earnings-spendings {
+        display: none;
+    }
+
+    .accounting .acc .latest-transactions,
+    .accounting .acc .monthly-points {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+        
+    .accounting .acc .latest-transactions .card-cover {
+        width: 100%;
+        background: #F5F5F5;
+    }
+
+    .accounting .acc .monthly-points .title {
+        margin-top: 0;
+    }
+
+    .accounting .acc .latest-transactions .title .name {
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    
+    .accounting .acc .latest-transactions .title .search {
+        display: none;
+    }
+
+    .accounting .acc .latest-transactions .activity .pic {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .accounting .acc .latest-transactions .activity .activity-details {
+        flex: 0 0 62%;
+        max-width: 62%;
+    }
+}
